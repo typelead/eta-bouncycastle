@@ -66,3 +66,6 @@ data KeyEncapsulation = KeyEncapsulation @org.bouncycastle.crypto.KeyEncapsulati
 
 data KeyEncoder = KeyEncoder @org.bouncycastle.crypto.KeyEncoder
   deriving Class
+
+data KeyParser = KeyParser @org.bouncycastle.crypto.KeyParser
+  deriving Class

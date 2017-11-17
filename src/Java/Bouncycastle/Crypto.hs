@@ -5,6 +5,7 @@ import Java
 import Java.Array
 import Java.Math
 import Java.Bouncycastle.Types
+import Interop.Java.IO
 import Interop.Java.Security
 
 -- Start org.bouncycastle.crypto.AsymmetricBlockCipher
@@ -157,3 +158,9 @@ foreign import java unsafe "@interface init" initKE :: CipherParameters -> Java 
 foreign import java unsafe "@interface" getEncoded :: AsymmetricKeyParameter -> Java KeyEncoder JByteArray
 
 -- End org.bouncycastle.crypto.KeyEncoder
+
+-- Start org.bouncycastle.crypto.KeyParser
+
+foreign import java unsafe "@interface" readKey :: InputStream -> Java KeyParser AsymmetricKeyParameter
+
+-- End org.bouncycastle.crypto.KeyParrser
