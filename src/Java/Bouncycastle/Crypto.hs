@@ -94,3 +94,11 @@ foreign import java unsafe getcommitment :: Java Commitment JByteArray
 foreign import java unsafe getSecret :: Java Commitment JByteArray
 
 -- End org.bouncycastle.crypto.Commitment
+
+-- Start org.bouncycastle.crypto.DerivationFunction
+
+foreign import java unsafe generateBytes :: JByteArray -> Int -> Int -> Java DerivationFunction Int
+
+foreign import java unsafe initDF :: DerivationParameters -> Java DerivationFunction ()
+
+-- End org.bouncycastle.crypto.DerivationFunction

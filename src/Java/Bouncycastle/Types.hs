@@ -35,3 +35,9 @@ data Committer = Committer @org.bouncycastle.crypto.Committer
 
 data Commitment = Commitment @org.bouncycastle.crypto.Commiter
   deriving Class
+
+data DerivationFunction = DerivationFunction @org.bouncycastle.crypto.DerivationFunction
+  deriving Class
+
+data DerivationParameters = DerivationParameters @org.bouncycastle.crypto.DerivationParameters
+  deriving Class
