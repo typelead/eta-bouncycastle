@@ -210,3 +210,56 @@ foreign import java unsafe "@interface" getRecoveredMessage :: Java SignerWithRe
 foreign import java unsafe "@interface" hasFullMessage :: Java SignerWithRecovery Bool
 
 foreign import java unsafe "@interface" updateWithRecoveredMessage :: JByteArray -> Java SignerWithRecovery ()
+
+-- End org.bouncycastle.crypto.SignerWithRecovery
+
+-- Start org.bouncycastle.crypto.SkippingCipher
+
+foreign import java unsafe "@interface" getPosition :: Java SkippingCipher Int64
+
+foreign import java unsafe "@interface" seekTo :: Int64 -> Java SkippingCipher Int64
+
+foreign import java unsafe "@interface" skip :: Int64 -> Java SkippingCipher Int64
+
+-- End org.bouncycastle.crypto.SkippingCipher
+
+-- Start org.bouncycastle.crypto.StreamCipher
+
+foreign import java unsafe "@interface getAlgorithmName" getAlgorithmNameStream :: Java StreamCipher String
+
+foreign import java unsafe "@interface init" initSC :: Bool -> CipherParameters -> Java StreamCipher ()
+
+foreign import java unsafe "@interface" processBytes :: JByteArray -> Int -> Int -> JByteArray -> Int
+  -> Java StreamCipher Int
+
+foreign import java unsafe "@interface reset" resetStreamC :: Java StreamCipher ()
+
+foreign import java unsafe "@interface" returnByte :: Byte -> Java StreamCipher Byte
+
+-- End org.bouncycastle.crypto.StreamCipher
+
+-- Start org.bouncycastle.crypto.Wrapper
+
+foreign import java unsafe "@interface getAlgorithmName" getAlgorithmNameW :: Java Wrapper String
+
+foreign import java unsafe "@interface init" initW :: Bool -> CipherParameters -> Java Wrapper ()
+
+foreign import java unsafe "@interface" unwrap :: JByteArray -> Int -> Int -> Java Wrapper JByteArray
+
+foreign import java unsafe "@interface" wrap :: JByteArray -> Int -> Int -> Java Wrapper JByteArray
+
+-- End org.bouncycastle.crypto.Wrapper
+
+-- Start org.bouncycastle.crypto.Xof
+
+foreign import java unsafe "@interface doFinal" doFinalXof :: JByteArray -> Int -> Int -> Java Xof Int
+
+foreign import java unsafe "@interface doOutput" doOutputXof :: JByteArray -> Int -> Int -> Java Xof Int
+
+-- End org.bouncycastle.crypto.Xof
+
+-- Start org.bouncycastle.crypto.BufferedAsymmetricBlockCipher
+
+foreign import java unsafe buf :: Java BufferedAsymmetricBlockCipher JByteArray
+
+foreign import java unsafe bufOff :: Java BufferedAsymmetricBlockCipher Int

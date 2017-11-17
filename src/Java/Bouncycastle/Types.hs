@@ -81,3 +81,21 @@ data Signer = Signer @org.bouncycastle.crypto.Signer
 
 data SignerWithRecovery = SignerWithRecovery @org.bouncycastle.crypto.SignerWithRecovery
   deriving Class
+
+data SkippingCipher = SkippingCipher @org.bouncycastle.crypto.SkippingCipher
+  deriving Class
+
+data SkippingStreamCipher = SkippingStreamCipher @org.bouncycastle.crypto.SkippingStreamCipher
+  deriving Class
+
+data StreamCipher = StreamCipher @org.bouncycastle.crypto.StreamCipher
+  deriving Class
+
+data Wrapper = Wrapper @org.bouncycastle.crypto.Wrapper
+  deriving Class
+
+data Xof = Xof @org.bouncycastle.crypto.Xof
+  deriving Class
+
+data BufferedAsymmetricBlockCipher = BufferedAsymmetricBlockCipher @org.bouncycastle.crypto.BufferedAsymmetricBlockCipher
+  deriving Class
