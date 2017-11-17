@@ -47,10 +47,25 @@ foreign import java unsafe getPublic :: Java AsymmetricCipherKeyPair AsymmetricK
 
 -- Start org.bouncycastle.crypto.BasicAgreement
 
-foreign import java unsafe calculateAgreement :: CipherParameters -> Java BasicAgreement BigInteger
+foreign import java unsafe "@interface" calculateAgreement :: CipherParameters -> Java BasicAgreement BigInteger
 
-foreign import java unsafe getFieldSize :: Java BasicAgreement Int
+foreign import java unsafe "@interface" getFieldSize :: Java BasicAgreement Int
 
-foreign import java unsafe initBA :: CipherParameters -> Java BasicAgreement ()
+foreign import java unsafe "@interface" initBA :: CipherParameters -> Java BasicAgreement ()
 
 -- End org.bouncycastle.crypto.BasicAgreement
+
+-- Start org.bouncycastle.crypto.BlockCipher
+
+foreign import java unsafe "@interface" getAlgorithmName :: Java BlockCipher String
+
+foreign import java unsafe "@interface" getBlockSize :: Java BlockCipher Int
+
+foreign import java unsafe "@interface" initBC :: Bool -> CipherParameters -> Java BlockCipher ()
+
+foreign import java unsafe "@interface" processBlockBC :: JByteArray -> Int -> JByteArray -> Int
+    -> Java BlockCipher Int
+
+foreign import java unsafe "@interface" reset :: Java BlockCipher ()
+
+-- End org.bouncycastle.crypto.BlockCipher

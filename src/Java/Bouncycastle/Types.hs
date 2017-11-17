@@ -23,3 +23,6 @@ data AsymmetricKeyParameter = AsymmetricKeyParameter @org.bouncycastle.crypto.As
 
 data BasicAgreement = BasicAgreement @org.bouncycastle.crypto.BasicAgreement
   deriving Class
+
+data BlockCipher = BlockCipher @org.bouncycastle.crypto.BlockCipher
+  deriving Class
