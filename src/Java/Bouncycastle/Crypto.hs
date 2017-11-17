@@ -3,6 +3,7 @@ module Java.Bouncycastle.Crypto where
 
 import Java
 import Java.Array
+import Java.Math
 import Java.Bouncycastle.Types
 import Interop.Java.Security
 
@@ -46,8 +47,10 @@ foreign import java unsafe getPublic :: Java AsymmetricCipherKeyPair AsymmetricK
 
 -- Start org.bouncycastle.crypto.BasicAgreement
 
-foreign import java unsafe calculateAgreement :: CipherParameters -> Java AsymmetricCipherKeyPair BigInteger
+foreign import java unsafe calculateAgreement :: CipherParameters -> Java BasicAgreement BigInteger
 
-foreign import java unsafe getPublic :: Java AsymmetricCipherKeyPair AsymmetricKeyParameter
+foreign import java unsafe getFieldSize :: Java BasicAgreement Int
 
--- End org.bouncycastle.crypto.AsymmetricCipherKeyPair
+foreign import java unsafe initBA :: CipherParameters -> Java BasicAgreement ()
+
+-- End org.bouncycastle.crypto.BasicAgreement
