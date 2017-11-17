@@ -8,3 +8,15 @@ data AsymmetricBlockCipher = AsymmetricBlockCipher @org.bouncycastle.crypto.Asym
 
 data CipherParameters = CipherParameters @org.bouncycastle.crypto.CipherParameters
   deriving Class
+
+data AsymmetricCipherKeyPairGenerator = AsymmetricCipherKeyPairGenerator @org.bouncycastle.crypto.AsymmetricCipherKeyPairGenerator
+  deriving Class
+
+data AsymmetricCipherKeyPair = AsymmetricCipherKeyPair @org.bouncycastle.crypto.AsymmetricCipherKeyPair
+  deriving Class
+
+data KeyGenerationParameters = KeyGenerationParameters @org.bouncycastle.crypto.KeyGenerationParameters
+  deriving Class
+
+data AsymmetricKeyParameter = AsymmetricKeyParameter @org.bouncycastle.crypto.AsymmetricKeyParameter
+  deriving Class

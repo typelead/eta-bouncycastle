@@ -4,6 +4,7 @@ module Java.Bouncycastle.Crypto where
 import Java
 import Java.Array
 import Java.Bouncycastle.Types
+import Interop.Java.Security
 
 -- Start org.bouncycastle.crypto.AsymmetricBlockCipher
 
@@ -17,3 +18,28 @@ foreign import java unsafe "@interface" processBlock :: JByteArray -> Int -> Int
     -> Java AsymmetricBlockCipher JByteArray
 
 -- End org.bouncycastle.crypto.AsymmetricBlockCipher
+
+-- Start org.bouncycastle.crypto.AsymmetricCipherKeyPairGenerator
+
+foreign import java unsafe "@interface" generateKeyPair :: Java AsymmetricCipherKeyPairGenerator AsymmetricCipherKeyPair
+
+foreign import java unsafe "@interface" initACKPG :: KeyGenerationParameters
+  -> Java AsymmetricCipherKeyPairGenerator ()
+
+-- End org.bouncycastle.crypto.AsymmetricCipherKeyPairGenerator
+
+-- Start org.bouncycastle.crypto.KeyGenerationParameters
+
+foreign import java unsafe getRandom :: Java KeyGenerationParameters SecureRandom
+
+foreign import java unsafe getStrength :: Java KeyGenerationParameters Int
+
+-- End org.bouncycastle.crypto.KeyGenerationParameters
+
+-- Start org.bouncycastle.crypto.AsymmetricCipherKeyPair
+
+foreign import java unsafe getPrivate :: Java AsymmetricCipherKeyPair AsymmetricKeyParameter
+
+foreign import java unsafe getPublic :: Java AsymmetricCipherKeyPair AsymmetricKeyParameter
+
+-- End org.bouncycastle.crypto.AsymmetricCipherKeyPair
