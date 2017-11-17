@@ -20,3 +20,6 @@ data KeyGenerationParameters = KeyGenerationParameters @org.bouncycastle.crypto.
 
 data AsymmetricKeyParameter = AsymmetricKeyParameter @org.bouncycastle.crypto.AsymmetricKeyParameter
   deriving Class
+
+data BasicAgreement = BasicAgreement @org.bouncycastle.crypto.BasicAgreement
+  deriving Class

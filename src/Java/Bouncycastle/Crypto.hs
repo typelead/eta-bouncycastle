@@ -43,3 +43,11 @@ foreign import java unsafe getPrivate :: Java AsymmetricCipherKeyPair Asymmetric
 foreign import java unsafe getPublic :: Java AsymmetricCipherKeyPair AsymmetricKeyParameter
 
 -- End org.bouncycastle.crypto.AsymmetricCipherKeyPair
+
+-- Start org.bouncycastle.crypto.BasicAgreement
+
+foreign import java unsafe calculateAgreement :: CipherParameters -> Java AsymmetricCipherKeyPair BigInteger
+
+foreign import java unsafe getPublic :: Java AsymmetricCipherKeyPair AsymmetricKeyParameter
+
+-- End org.bouncycastle.crypto.AsymmetricCipherKeyPair
