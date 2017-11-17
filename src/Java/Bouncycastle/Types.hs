@@ -1,7 +1,9 @@
-{-# LANGUAGE DataKinds, TypeFamilies, TypeOperators #-}
+{-# LANGUAGE DataKinds, TypeFamilies, TypeOperators, MultiParamTypeClasses #-}
 module Java.Bouncycastle.Types where
 
 import Java
+import Java.Array
+import Java.Math
 
 data AsymmetricBlockCipher = AsymmetricBlockCipher @org.bouncycastle.crypto.AsymmetricBlockCipher
  deriving Class
@@ -47,3 +49,11 @@ data Digest = Digest @org.bouncycastle.crypto.Digest
 
 data DigestDerivationFunction = DigestDerivationFunction @org.bouncycastle.crypto.DigestDerivationFunction
   deriving Class
+
+data DSA = DSA @org.bouncycastle.crypto.DSA
+  deriving Class
+
+data BigIntegerArray = BigIntegerArray @java.math.BigInteger[]
+  deriving Class
+
+instance JArray BigInteger BigIntegerArray

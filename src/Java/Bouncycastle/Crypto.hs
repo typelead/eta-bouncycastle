@@ -122,3 +122,14 @@ foreign import java unsafe "@interface update" updateBA :: JByteArray -> Int -> 
 foreign import java unsafe "@interface" getDigest :: Java DigestDerivationFunction Digest
 
 -- End org.bouncycastle.crypto.DigestDerivationFunction
+
+-- Start org.bouncycastle.crypto.DSA
+
+foreign import java unsafe "@interface" generateSignature :: JByteArray -> Java DSA BigIntegerArray
+
+foreign import java unsafe "@interface init" initDSA :: Bool -> CipherParameters -> Java DSA ()
+
+foreign import java unsafe "@interface" verifySignature :: JByteArray -> BigInteger
+  -> BigInteger -> Java DSA Bool
+
+-- End org.bouncycastle.crypto.DSA
