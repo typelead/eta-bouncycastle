@@ -163,4 +163,20 @@ foreign import java unsafe "@interface" getEncoded :: AsymmetricKeyParameter -> 
 
 foreign import java unsafe "@interface" readKey :: InputStream -> Java KeyParser AsymmetricKeyParameter
 
--- End org.bouncycastle.crypto.KeyParrser
+-- End org.bouncycastle.crypto.KeyParser
+
+-- Start org.bouncycastle.crypto.Mac
+
+foreign import java unsafe "@interface doFinal" doFinalMac :: JByteArray -> Int -> Java Mac Int
+
+foreign import java unsafe "@interface getAlgorithmName" getAlgorithmNameMac :: Java Mac String
+
+foreign import java unsafe "@interface" getMacSize :: Java Mac Int
+
+foreign import java unsafe "@interface init" initMac :: CipherParameters -> Java Mac ()
+
+foreign import java unsafe "@interface update" updateMac :: Byte -> Java Mac ()
+
+foreign import java unsafe "@interface update" updateArrayMac :: JByteArray -> Int -> Int -> Java Mac ()
+
+-- End org.bouncycastle.crypto.Mac
