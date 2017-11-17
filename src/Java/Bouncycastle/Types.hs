@@ -60,3 +60,6 @@ instance JArray BigInteger BigIntegerArray
 
 data ExtendedDigest = ExtendedDigest @org.bouncycastle.crypto.ExtendedDigest
   deriving Class
+
+data KeyEncapsulation = KeyEncapsulation @org.bouncycastle.crypto.KeyEncapsulation
+  deriving Class

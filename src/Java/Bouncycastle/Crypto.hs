@@ -139,3 +139,15 @@ foreign import java unsafe "@interface" verifySignature :: JByteArray -> BigInte
 foreign import java unsafe "@interface" getByLength :: Java ExtendedDigest Int
 
 -- End org.bouncycastle.crypto.ExtendedDigest
+
+-- Start org.bouncycastle.crypto.KeyEncapsulation
+
+foreign import java unsafe "@interface" decrypt :: JByteArray -> Int -> Int
+  -> Int -> Java KeyEncapsulation CipherParameters
+
+foreign import java unsafe "@interface" encrypt :: JByteArray -> Int -> Int
+  -> Java KeyEncapsulation CipherParameters
+
+foreign import java unsafe "@interface init" initKE :: CipherParameters -> Java KeyEncapsulation ()
+
+-- End org.bouncycastle.crypto.KeyEncapsulation
