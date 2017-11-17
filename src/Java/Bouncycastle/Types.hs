@@ -72,3 +72,6 @@ data KeyParser = KeyParser @org.bouncycastle.crypto.KeyParser
 
 data Mac = Mac @org.bouncycastle.crypto.Mac
   deriving Class
+
+data MacDerivationFunction = MacDerivationFunction @org.bouncycastle.crypto.MacDerivationFunction
+  deriving Class

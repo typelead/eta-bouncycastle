@@ -180,3 +180,9 @@ foreign import java unsafe "@interface update" updateMac :: Byte -> Java Mac ()
 foreign import java unsafe "@interface update" updateArrayMac :: JByteArray -> Int -> Int -> Java Mac ()
 
 -- End org.bouncycastle.crypto.Mac
+
+-- Start org.bouncycastle.crypto.MacDerivationFunction
+
+foreign import java unsafe "@interface" getMac :: Java MacDerivationFunction Mac
+
+-- End org.bouncycastle.crypto.MacDerivationFunction
