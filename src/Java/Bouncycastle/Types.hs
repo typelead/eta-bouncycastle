@@ -26,3 +26,6 @@ data BasicAgreement = BasicAgreement @org.bouncycastle.crypto.BasicAgreement
 
 data BlockCipher = BlockCipher @org.bouncycastle.crypto.BlockCipher
   deriving Class
+
+data CharToByteConverter = CharToByteConverter @org.bouncycastle.crypto.CharToByteConverter
+  deriving Class

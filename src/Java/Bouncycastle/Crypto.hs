@@ -69,3 +69,11 @@ foreign import java unsafe "@interface" processBlockBC :: JByteArray -> Int -> J
 foreign import java unsafe "@interface" reset :: Java BlockCipher ()
 
 -- End org.bouncycastle.crypto.BlockCipher
+
+-- Start org.bouncycastle.crypto.CharToByteConverter
+
+foreign import java unsafe "@interface" convert :: JCharArray -> Java CharToByteConverter JByteArray
+
+foreign import java unsafe "@interface" getType :: Java CharToByteConverter String
+
+-- End org.bouncycastle.crypto.CharToByteConverter
