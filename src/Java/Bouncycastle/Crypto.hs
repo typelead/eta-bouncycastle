@@ -260,6 +260,18 @@ foreign import java unsafe "@interface doOutput" doOutputXof :: JByteArray -> In
 
 -- Start org.bouncycastle.crypto.BufferedAsymmetricBlockCipher
 
-foreign import java unsafe buf :: Java BufferedAsymmetricBlockCipher JByteArray
+foreign import java unsafe "doFinal" doFinalBABC :: Java BufferedAsymmetricBlockCipher JByteArray
 
-foreign import java unsafe bufOff :: Java BufferedAsymmetricBlockCipher Int
+foreign import java unsafe getBufferPosition :: Java BufferedAsymmetricBlockCipher Int
+
+foreign import java unsafe "getInputBlockSize" getInputBlockSizeBABC :: Java BufferedAsymmetricBlockCipher Int
+
+foreign import java unsafe "getOutputBlockSize" getOutputBlockSizeBABC :: Java BufferedAsymmetricBlockCipher Int
+
+foreign import java unsafe getUnderlyingCipher :: Java BufferedAsymmetricBlockCipher AsymmetricBlockCipher
+
+-- End org.bouncycastle.crypto.BufferedAsymmetricBlockCipher
+
+-- Start org.bouncycastle.crypto.BufferedBlockCipher
+
+foreign import java unsafe buf :: Java BufferedAsymmetricBlockCipher JByteArray

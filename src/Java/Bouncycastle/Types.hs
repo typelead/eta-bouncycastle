@@ -99,3 +99,6 @@ data Xof = Xof @org.bouncycastle.crypto.Xof
 
 data BufferedAsymmetricBlockCipher = BufferedAsymmetricBlockCipher @org.bouncycastle.crypto.BufferedAsymmetricBlockCipher
   deriving Class
+
+data BufferedBlockCipher = BufferedBlockCipher @org.bouncycastle.crypto.BufferedBlockCipher
+  deriving Class
