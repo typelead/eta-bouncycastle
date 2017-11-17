@@ -41,3 +41,6 @@ data DerivationFunction = DerivationFunction @org.bouncycastle.crypto.Derivation
 
 data DerivationParameters = DerivationParameters @org.bouncycastle.crypto.DerivationParameters
   deriving Class
+
+data Digest = Digest @org.bouncycastle.crypto.Digest
+  deriving Class

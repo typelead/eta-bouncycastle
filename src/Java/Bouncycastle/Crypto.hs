@@ -24,7 +24,7 @@ foreign import java unsafe "@interface" processBlock :: JByteArray -> Int -> Int
 
 foreign import java unsafe "@interface" generateKeyPair :: Java AsymmetricCipherKeyPairGenerator AsymmetricCipherKeyPair
 
-foreign import java unsafe "@interface" initACKPG :: KeyGenerationParameters
+foreign import java unsafe "@interface init" initACKPG :: KeyGenerationParameters
   -> Java AsymmetricCipherKeyPairGenerator ()
 
 -- End org.bouncycastle.crypto.AsymmetricCipherKeyPairGenerator
@@ -51,7 +51,7 @@ foreign import java unsafe "@interface" calculateAgreement :: CipherParameters -
 
 foreign import java unsafe "@interface" getFieldSize :: Java BasicAgreement Int
 
-foreign import java unsafe "@interface" initBA :: CipherParameters -> Java BasicAgreement ()
+foreign import java unsafe "@interface init" initBA :: CipherParameters -> Java BasicAgreement ()
 
 -- End org.bouncycastle.crypto.BasicAgreement
 
@@ -61,9 +61,9 @@ foreign import java unsafe "@interface" getAlgorithmName :: Java BlockCipher Str
 
 foreign import java unsafe "@interface" getBlockSize :: Java BlockCipher Int
 
-foreign import java unsafe "@interface" initBC :: Bool -> CipherParameters -> Java BlockCipher ()
+foreign import java unsafe "@interface init" initBC :: Bool -> CipherParameters -> Java BlockCipher ()
 
-foreign import java unsafe "@interface" processBlockBC :: JByteArray -> Int -> JByteArray -> Int
+foreign import java unsafe "@interface processBlock" processBlockBC :: JByteArray -> Int -> JByteArray -> Int
     -> Java BlockCipher Int
 
 foreign import java unsafe "@interface" reset :: Java BlockCipher ()
@@ -97,8 +97,22 @@ foreign import java unsafe getSecret :: Java Commitment JByteArray
 
 -- Start org.bouncycastle.crypto.DerivationFunction
 
-foreign import java unsafe generateBytes :: JByteArray -> Int -> Int -> Java DerivationFunction Int
+foreign import java unsafe "@interface" generateBytes :: JByteArray -> Int -> Int -> Java DerivationFunction Int
 
-foreign import java unsafe initDF :: DerivationParameters -> Java DerivationFunction ()
+foreign import java unsafe "@interface init" initDF :: DerivationParameters -> Java DerivationFunction ()
 
 -- End org.bouncycastle.crypto.DerivationFunction
+
+-- Start org.bouncycastle.crypto.Digest
+
+foreign import java unsafe "@interface" doFinal :: JByteArray -> Int -> Java Digest Int
+
+foreign import java unsafe "@interface getAlgorithmNameD" getAlgorithmNameD :: Java Digest String
+
+foreign import java unsafe "@interface" getDigestSize :: Java Digest Int
+
+foreign import java unsafe "@interface" update :: Byte -> Java Digest ()
+
+foreign import java unsafe "@interface update" updateBA :: JByteArray -> Int -> Int -> Java Digest ()
+
+-- End org.bouncycastle.crypto.Digest
