@@ -63,3 +63,6 @@ data ExtendedDigest = ExtendedDigest @org.bouncycastle.crypto.ExtendedDigest
 
 data KeyEncapsulation = KeyEncapsulation @org.bouncycastle.crypto.KeyEncapsulation
   deriving Class
+
+data KeyEncoder = KeyEncoder @org.bouncycastle.crypto.KeyEncoder
+  deriving Class

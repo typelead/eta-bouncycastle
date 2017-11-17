@@ -151,3 +151,9 @@ foreign import java unsafe "@interface" encrypt :: JByteArray -> Int -> Int
 foreign import java unsafe "@interface init" initKE :: CipherParameters -> Java KeyEncapsulation ()
 
 -- End org.bouncycastle.crypto.KeyEncapsulation
+
+-- Start org.bouncycastle.crypto.KeyEncoder
+
+foreign import java unsafe "@interface" getEncoded :: AsymmetricKeyParameter -> Java KeyEncoder JByteArray
+
+-- End org.bouncycastle.crypto.KeyEncoder
