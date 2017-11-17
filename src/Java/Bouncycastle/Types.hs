@@ -75,3 +75,6 @@ data Mac = Mac @org.bouncycastle.crypto.Mac
 
 data MacDerivationFunction = MacDerivationFunction @org.bouncycastle.crypto.MacDerivationFunction
   deriving Class
+
+data Signer = Signer @org.bouncycastle.crypto.Signer
+  deriving Class

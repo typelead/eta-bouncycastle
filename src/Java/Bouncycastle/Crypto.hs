@@ -186,3 +186,17 @@ foreign import java unsafe "@interface update" updateArrayMac :: JByteArray -> I
 foreign import java unsafe "@interface" getMac :: Java MacDerivationFunction Mac
 
 -- End org.bouncycastle.crypto.MacDerivationFunction
+
+-- Start org.bouncycastle.crypto.Signer
+
+foreign import java unsafe "@interface generateSignature" generateSignatureS :: Java Signer JByteArray
+
+foreign import java unsafe "@interface init" initS :: Bool -> CipherParameters -> Java Signer ()
+
+foreign import java unsafe "@interface reset" resetS :: Java Signer ()
+
+foreign import java unsafe "@interface update" updateS :: Byte -> Java Signer ()
+
+foreign import java unsafe "@interface update" updateArrayS :: JByteArray -> Int -> Int -> Java Signer ()
+
+foreign import java unsafe "@interface verifySignature" verifySignatureS :: JByteArray -> Java Signer Bool
