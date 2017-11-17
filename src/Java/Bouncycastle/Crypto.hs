@@ -77,3 +77,20 @@ foreign import java unsafe "@interface" convert :: JCharArray -> Java CharToByte
 foreign import java unsafe "@interface" getType :: Java CharToByteConverter String
 
 -- End org.bouncycastle.crypto.CharToByteConverter
+
+-- Start org.bouncycastle.crypto.Committer
+
+foreign import java unsafe "@interface" commit :: JByteArray -> Java Committer Commitment
+
+foreign import java unsafe "@interface" isRevealed :: Commitment -> JByteArray
+  -> Java Committer Bool
+
+-- End org.bouncycastle.crypto.Committer
+
+-- Start org.bouncycastle.crypto.Commitment
+
+foreign import java unsafe getcommitment :: Java Commitment JByteArray
+
+foreign import java unsafe getSecret :: Java Commitment JByteArray
+
+-- End org.bouncycastle.crypto.Commitment

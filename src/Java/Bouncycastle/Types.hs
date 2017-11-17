@@ -29,3 +29,9 @@ data BlockCipher = BlockCipher @org.bouncycastle.crypto.BlockCipher
 
 data CharToByteConverter = CharToByteConverter @org.bouncycastle.crypto.CharToByteConverter
   deriving Class
+
+data Committer = Committer @org.bouncycastle.crypto.Committer
+  deriving Class
+
+data Commitment = Commitment @org.bouncycastle.crypto.Commiter
+  deriving Class
