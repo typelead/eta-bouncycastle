@@ -133,3 +133,9 @@ foreign import java unsafe "@interface" verifySignature :: JByteArray -> BigInte
   -> BigInteger -> Java DSA Bool
 
 -- End org.bouncycastle.crypto.DSA
+
+-- Start org.bouncycastle.crypto.ExtendedDigest
+
+foreign import java unsafe "@interface" getByLength :: Java ExtendedDigest Int
+
+-- End org.bouncycastle.crypto.ExtendedDigest

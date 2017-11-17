@@ -57,3 +57,6 @@ data BigIntegerArray = BigIntegerArray @java.math.BigInteger[]
   deriving Class
 
 instance JArray BigInteger BigIntegerArray
+
+data ExtendedDigest = ExtendedDigest @org.bouncycastle.crypto.ExtendedDigest
+  deriving Class
