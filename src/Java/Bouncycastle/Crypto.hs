@@ -116,3 +116,9 @@ foreign import java unsafe "@interface" update :: Byte -> Java Digest ()
 foreign import java unsafe "@interface update" updateBA :: JByteArray -> Int -> Int -> Java Digest ()
 
 -- End org.bouncycastle.crypto.Digest
+
+-- Start org.bouncycastle.crypto.DigestDerivationFunction
+
+foreign import java unsafe "@interface" getDigest :: Java DigestDerivationFunction Digest
+
+-- End org.bouncycastle.crypto.DigestDerivationFunction
