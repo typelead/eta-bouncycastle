@@ -200,3 +200,13 @@ foreign import java unsafe "@interface update" updateS :: Byte -> Java Signer ()
 foreign import java unsafe "@interface update" updateArrayS :: JByteArray -> Int -> Int -> Java Signer ()
 
 foreign import java unsafe "@interface verifySignature" verifySignatureS :: JByteArray -> Java Signer Bool
+
+-- End org.bouncycastle.crypto.Signer
+
+-- Start org.bouncycastle.crypto.SignerWithRecovery
+
+foreign import java unsafe "@interface" getRecoveredMessage :: Java SignerWithRecovery JByteArray
+
+foreign import java unsafe "@interface" hasFullMessage :: Java SignerWithRecovery Bool
+
+foreign import java unsafe "@interface" updateWithRecoveredMessage :: JByteArray -> Java SignerWithRecovery ()
